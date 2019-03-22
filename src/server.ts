@@ -10,6 +10,8 @@ app.get('/', (req: express.Request, res: express.Response) => {
   res.send('Hello FrostDate 2.0')
 })
 
+app.use('/api/v2/dates', require('./controllers/dates'))
+
 const server = app.listen(port, () => {
   console.log(`❄️ Serving up frost dates on ${port} 🔥`)
 })
